@@ -1,0 +1,240 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+    color: black;
+    margin: 100px;
+    margin-top: 20px;
+}
+
+.header {
+    background: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #34E0A1;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #34E0A1;
+}
+
+.search-bar {
+    display: flex;
+    gap: 5px;
+    border: none;
+    
+    
+}
+
+.search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.search-bar button {
+    background: #34E0A1;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.search-bar input:focus {
+    outline: none;
+}
+
+
+.where {
+    background: #34E0A1;
+    margin: 30px;
+    padding: 50px 20px;
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    
+}
+
+.where input {
+    padding: 10px;
+    width: 65%;
+    
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    font-size: 16px;
+}
+.where input:focus{
+    outline: none;
+}
+
+
+.section {
+    padding: 30px 20px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.course-card {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(25% - 15px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    padding: 0 10px 10px;
+    color: #555;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.card {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent; 
+  cursor: pointer;
+  
+}
+
+.card:hover {
+
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  box-shadow: 0 0 15px 3px #34E0A1; 
+  border-color: #34E0A1; 
+}
+
+
+
+.booknow {
+    text-align: center;
+    background: #000;
+    color: white;
+    padding: 40px 20px;
+}
+
+.booknow button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #34E0A1;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* Media query */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+
+    .where input {
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    body{
+        font-size: 10px;
+        margin: 100px;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+@media (max-width: 480px){
+    .search-bar{
+        flex-direction: column;
+        width: 100%;
+    }
+    .where{
+        display: none;
+    }
+
+
+}
+    
+    
+}
